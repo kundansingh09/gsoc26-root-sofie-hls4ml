@@ -217,8 +217,7 @@ def parse_hls_model(hls_model):
 # ==========================================
 # 1. Pre-Processing: ONNX Patching
 # ==========================================
-# QONNX requires strict attribute definitions. We patch the model to include
-# explicit dilations and groups to satisfy downstream conversion validators.
+# QONNX requires strict attribute definitions. We patch the model to include explicit dilations and groups to satisfy downstream conversion validators.
 print("Patching missing attributes in the ONNX file...")
 original_onnx_path = '/kaggle/working/ConvWithAsymmetricPadding.onnx' 
 patched_onnx_path = '/kaggle/working/exercise_model_patched.onnx'
@@ -237,8 +236,7 @@ onnx.save(onnx_model, patched_onnx_path)
 # ==========================================
 # 2. Transformation: QONNX format
 # ==========================================
-# Converts model to Channels-Last (NHWC) format, which is the native
-# data layout for HLS4ML synthesis pipelines.
+# Converts model to Channels-Last (NHWC) format, which is the native data layout for HLS4ML synthesis pipelines.
 print("Converting ONNX to Channels-Last format...")
 qonnx_model = ModelWrapper(patched_onnx_path)
 qonnx_model = qonnx.util.cleanup.cleanup_model(qonnx_model)
@@ -267,7 +265,6 @@ hls_model = hls4ml.converters.convert_from_onnx_model(final_onnx_model, hls_conf
 # ==========================================
 # 4. Final Metadata Extraction
 # ==========================================
-# Final step of Exercise 4: Outputting a dictionary compatible with SOFIE RModel.
 print("\nParsing ModelGraph...")
 final_configuration = parse_hls_model(hls_model)
 
