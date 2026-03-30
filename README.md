@@ -31,8 +31,8 @@ The builder script translates the parsed configuration into a functional ROOT SO
 
 ## File Overview
 
-* exercise_4_parser.py: The modular parser for hls4ml ModelGraphs.
-* exercise_5_builder.py: The PyROOT script to build the RModel and generate C++ code.
+* ex4_parser.py: The modular parser for hls4ml ModelGraphs.
+* ex5_builder.py: The PyROOT script to build the RModel and generate C++ code.
 
 
 I affirm that I have thoroughly completed the preliminary requirements as specified:
