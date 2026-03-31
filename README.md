@@ -35,7 +35,7 @@ The builder script translates the parsed configuration into a functional ROOT SO
 * ex5_builder.py: The PyROOT script to build the RModel and generate C++ code.
 
 
-I affirm that I have thoroughly completed the preliminary requirements as specified:
+I affirm that I have thoroughly completed the preliminary requirements as specified: [Click here](Preliminary_Exercises.md)
 
 * Exercise 1: Built ROOT from source with TMVA/SOFIE and Protobuf support, familiarizing myself with CMake and Git version control.
 * Exercise 2: Gained familiarity with ROOT TMVA deep learning code, running tutorials for Higgs classification, CNN classification, and SOFIE ONNX/Keras/PyTorch inference.
